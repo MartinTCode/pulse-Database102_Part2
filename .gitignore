@@ -10,6 +10,7 @@
 *.xml
 *.gz
 *.toc
+*.bcf-SAVE-ERROR
 
 # Compiled class file
 *.class
