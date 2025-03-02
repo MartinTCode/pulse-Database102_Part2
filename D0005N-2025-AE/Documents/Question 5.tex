@@ -31,7 +31,59 @@ What to do here?
     \item motivate the yes/no using the already listed pros/cons
   \end{enumerate}
 
-\newpage Answers to Question 5: (MARTIN RESEARCH REFERENCES)
+\newpage Answers to Question 5: (MARTIN RESEARCH REFERENCES)\\\\
+\textbf{\underline{Motives as to answer yes:}}\\
+\textbf{Enhanced performance and faster queries}\\
+DM are needed since a Census Bureau is dealing with large and complext data warehouses serving very different subjects.\\
+DM:s are specialized thus giving better performance and faster query execution \footnote{p. 1242}.
+\\\\
+\textbf{Subject-Object analysis:}\\
+Immigration might be related to many different subjects.\\
+For example, focused employment data is needed for the labour market agency;\\
+demographic and disease-related datasets might be needed for the health department.\\
+Separating these subject-object relationships into different DM gets rid of overhead.\footnote{p. 1243}\\
+\\
+\textbf{cost-effective and reduced complexity:}\\
+DM:s can be implemented incrementally, thus reducing project risk and cost \footnote{p. 1244}.
+\\\\
+\textbf{Support for Distributed Decision-Making:}\\
+A well-designed DM structure enables each access stakeholder a curated dataset suited for their specific needs \footnote{p. 1243}.\\
+As such, a DM supports distributed decision-making, making the use of the system more efficient.
+\\\\
+\textbf{Scalability and Flexibility:}\\
+DMs segment information into more manageable parts \footnote{p. 1245}. 
+This makes handling increasing data-loads more flexible and thus scability easier than in a DW.
+\\\\
+\textbf{\underline{Motives as to answer no:}}\\
+\textbf{Enterprise-Wide Data Access (Single Source of Truth):}\\
+DM:s store specialized data for certain subject-object analysis cases. 
+This may cascade into a creation of many DM:s in such a big and diverse use-case scenario as a Census Bureau since there are many of these cases.
+Since a DM has it's own data for this purpose, a DM may, if not properly integrated, create data silos.
+Data silos can lead to incosistent data across different agencies creating incongruencies and reliability problems.
+Thus they can potentioally violate the \textit{Single Source of Truth} principle \footnote{p. 1228}.
+A centralized EDW on the other hand ensures that all users access the same data, thus avoiding this problem.
+\\\\
+\textbf{Advanced Query Optimization \& OLAP Cubes:}\\
+Modern BI architectures use in-memory analytics and OLAP cubes, both of which simplify quering on large datasets without necessarily the need of datamarts.
+OLAP cubes optimize data retrieval by pre-aggregating data and offering multidemensional analysis, reducing the need for separate specialized DM:s \footnote{p. 1237}.\\
+In-memory analytics stores data in RAM instead of disk, significantly improving query response times \footnote{p. 1260}.
+These technologies minimalize redundancy and improve scaliabilty and performance of a RDW \footnote{p. 1242}.
+\\ As such, with the help of these technolgies which can offer real-time analytics within the RDW \footnote{p. 1243}, the need for the DM:s diminishes.
+\\\\\textbf{Maintenance and Redundancy Challenges:}\\
+DM:s require consistency and synchonization with the main EDW, which significantly increases maintenance cost and complexity \footnote{p. 1246}.
+Without DM:s this problem is not present at the same degree.
+\\\\\textbf{\color{red}{MOVE THIS PART BELOW AWAY FROM HERE TO SANDBOX PART? THEY ARE DIFFERENT FROM DATAMARTS, ALTHOUGH THEY CAN COMPLIMENT THEM. HARD TO MOTIVATE...}}
+\\\textbf{Using sandboxes\footnote{lecture 1, p.33-39} in-place-of Data Marts:}\\
+Although being a different and not fully interchangable technology to DM:s, a sandbox offers key advatages:
+It is not as time costly to implement, easily adaptable,does not risk data redundancy and segregation\footnote{lecture 1, p.34}.\\
+It is scalable and useful for advanced analytics \footnote{lecture 1, p.33}.
+For ad-hoc analysis, the sandbox can in some cases replace data marts.\\\\
+
+\textbf{\underline{Final answer - Yes, but used sparigly:}}\\
+- Central EDW should remain the primary data repository to avoid data silos and overhead.\\
+- High priority departments that require specialized analytics should have DM:s.\\
+- {\color{red} DELETE THIS PART? DOES THE TWO ABOVE SUFFICE?} BI Sandboxes can be used instead of datamarts for ad-hoc analysis to avoid data silos.
+exploratory.
 
 \newpage 
 % see how to write a mathematical formula below (note: this line is marked as comment!)
