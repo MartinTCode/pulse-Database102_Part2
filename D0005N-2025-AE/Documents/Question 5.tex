@@ -63,6 +63,7 @@ Data silos can lead to incosistent data across different agencies creating incon
 Thus they can potentioally violate the \textit{Single Source of Truth} principle \footnote{p. 1228}.
 A centralized EDW on the other hand ensures that all users access the same data, thus avoiding this problem.
 \\\\
+\\\textbf{\color{red}{THIS TEXT NEEDS TO BE REWRITTEN OR REMOVED. IT IS NOT HELPFUL HERE GIVEN HIS LECTURE VIDEO (!= LECTURE PP)}}
 \textbf{Advanced Query Optimization \& OLAP Cubes:}\\
 Modern BI architectures use in-memory analytics and OLAP cubes, both of which simplify quering on large datasets without necessarily the need of datamarts.
 OLAP cubes optimize data retrieval by pre-aggregating data and offering multidemensional analysis, reducing the need for separate specialized DM:s \footnote{p. 1237}.\\
@@ -79,7 +80,8 @@ It is not as time costly to implement, easily adaptable,does not risk data redun
 It is scalable and useful for advanced analytics \footnote{lecture 1, p.33}.
 For ad-hoc analysis, the sandbox can in some cases replace data marts.\\\\
 
-\textbf{\underline{Final answer - Yes, but used sparigly:}}\\
+\\\textbf{\color{red}{THIS TEXT NEEDS TO BE EXPANDED, CLEARER MOTIVATION AS TO OUR CONCLUSION BEING YES TO DATAMARTS }}
+\textbf{\underline{Final answer - Yes, use data marts, but used sparigly:}}\\
 - Central EDW should remain the primary data repository to avoid data silos and overhead.\\
 - High priority departments that require specialized analytics should have DM:s.\\
 - {\color{red} DELETE THIS PART? DOES THE TWO ABOVE SUFFICE?} BI Sandboxes can be used instead of datamarts for ad-hoc analysis to avoid data silos.
