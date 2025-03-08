@@ -139,12 +139,14 @@ As such, the three DBMS are ranked as follows, with the best first:
 Both ClickHouse and SingleStore can use column-oriented storage, which is effecient for OLAP systems as formerly mentioned. PostgreSQL does not natively support columnar storage.
 ClickHouse is not inherently designed for in-memory usage \cite{clickhouseStorage}, while SingleStore is designed for in-memory usage \cite{singlestoreStorage}.
 As per optimizing storage size, ClickHouse scores the highest, SingleStore scores second, and PostgreSQL scores the lowest by a  far margin.
+\\
+Here which rankest the highest is not very clear, given that ClickHouse is not designed for in-memory usage, which is a disadvantage in terms of efficiency. However, ClickHouse scores the highest in terms of storage size reduction.
+Since the writers of this report are not experts in the field and given the aforementioned uncertainty, we will rank ClickHouse and SingleStore the highest for the sake of fairness. 
 \\\\
 As such, the three DBMS are ranked as follows, with the best first:
 
 \begin{enumerate}
-    \item SingleStore
-    \item ClickHouse
+    \item SingleStore \& ClickHouse
     \item PostgreSQL
 \end{enumerate}
 \subsection{Criteria 3 - Cost:}
@@ -181,3 +183,20 @@ As such, the three DBMS are ranked as follows, with the best first:
     \item SingleStore
     \item PostgreSQL
 \end{enumerate}
+
+\section{Conclusion}
+In favor of offering a quick overview of the ranking of the different criterias for each DBMS, a table is provided below with scoring per criteria for each DBMS. 
+If the DBMS came first in a criteria, it was awarded 3 points, if it came second it was awarded 2 points, and if it came last it was awarded 1 point.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{DBMS} & \textbf{Scalability} & \textbf{Storage} & \textbf{Cost} & \textbf{Security} & \textbf{Latency} & \textbf{Total} \\ \hline
+    ClickHouse & 2 & 3 & 3 & 3 & 3 & 14 \\ \hline
+    SingleStore & 3 & 3 & 1 & 2 & 2 & 11 \\ \hline
+    PostgreSQL & 1 & 1 & 3 & 1 & 1 & 7 \\ \hline
+    \end{tabular}
+    \caption{Scoring per criteria for each DBMS}
+    \label{tab:my-table}
+\end{table}
