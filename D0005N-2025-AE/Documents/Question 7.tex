@@ -94,7 +94,7 @@ within the data warehouse."\cite[p. 1309]{CourseLitt}
 \end{itemize}    
 \subsection{Vendor 2 - SingleStore:}
 \begin{itemize}
-    \item Scalability: allows both vertical and horizontal scaling. Horizontal scaling through nodes \cite{singlestoreScaling}
+    \item Scalability: allows both vertical and horizontal scaling. Horizontal scaling through nodes \cite{singlestoreScaling}. SingleStore does automatically shard \cite{SinglestoreSharding}.
     \item Storage: Can be modified to have either column- or row-oriented storage \cite{singlestoreStorage}. SingleStore is designed for in-memory usage \cite{singlestoreStorage}.
     In the benchmark SingleStore scores worse than ClickHouse but far better than PostgreSQL in terms of storage size reduction (See Storage Size under Appendix~\ref{sec:benchmarks}).
     \item Cost: SingleStore is charged at individual rates (no publically available fixed fee) \cite{singleStoreCost}.
@@ -115,7 +115,7 @@ within the data warehouse."\cite[p. 1309]{CourseLitt}
     \item Cost: PostgreSQL is free to deploy and use, and is open-source \cite{postgresqlCost}.
     \item Security:
     \begin{itemize}
-        \item Data Encryption: PostgreSQL supports Transparent Data Encryption (TDE) \cite{postgresqlSecurity} and, with the help of an extension, Column-Level Encryption \cite{postgresqlSecurity2}.
+        \item Data Encryption: PostgreSQL supports Transparent Data Encryption (TDE) \cite{postgresqlSecurity} and, with the help of an extension, Column-Level Encryption with AES-256 \cite{postgresqlSecurity2}.
         \item Access Control: PostgreSQL supports Role-Based Access Control (RBAC) \cite{postgresqlSecurity3} and Row-Level Security (RLS) \cite{postgresqlSecurity4}.
         \item Security Certificates: None found.
     \end{itemize}
@@ -125,11 +125,50 @@ within the data warehouse."\cite[p. 1309]{CourseLitt}
 In this section we provide a comparison between vendors, therefore we have decided to add sections, one for each criterion. 
 
 \subsection{Criteria 1 - Scalability:}
- 
+All three DBMS:s have good support for vertical scaling.
+Both ClickHouse and SingleStore are designed to scale horizontally through sharding. ClickHouse does not automatically shard, and re-sharding your dataset will require significant compute resources \cite{clickhouseScaling}. SingleStore does automatically shard \cite{SinglestoreSharding}. PostgreSQL can scale horizontally but it is difficult and convoluted to implement \cite{postgresqlHorScaling}.
+\\\\
+As such, the three DBMS are ranked as follows, with the best first:
+
+\begin{enumerate}
+    \item SingleStore
+    \item ClickHouse
+    \item PostgreSQL
+\end{enumerate}
 \subsection{Criteria 2 - Storage:}
+Both ClickHouse and SingleStore can use column-oriented storage, which is effecient for OLAP systems as formerly mentioned. PostgreSQL does not natively support columnar storage.
+ClickHouse is not inherently designed for in-memory usage \cite{clickhouseStorage}, while SingleStore is designed for in-memory usage \cite{singlestoreStorage}.
+As per optimizing storage size, ClickHouse scores the highest, SingleStore scores second, and PostgreSQL scores the lowest by a  far margin.
+\\\\
+As such, the three DBMS are ranked as follows, with the best first:
 
+\begin{enumerate}
+    \item SingleStore
+    \item ClickHouse
+    \item PostgreSQL
+\end{enumerate}
 \subsection{Criteria 3 - Cost:}
+Both PostgreSQL and ClickHouse are free to deploy and use, and are open-source \cite{clickhouseCost} \cite{postgresqlCost}. SingleStore is charged at individual rates \cite{singleStoreCost}.
+\\\\
+As such, the three DBMS are ranked as follows, with the best first:
 
+\begin{enumerate}
+    \item PostgreSQL \& ClickHouse
+    \item SingleStore
+\end{enumerate}
 \subsection{Criteria 4 - Security:}
-
+As per data encryption, all three DBMS:s support AES 256-bit encryption.
+As per access control, Both SingleStore and PostgreSQL allow for Row-Level Security (RLS), while ClickHouse does not.
+ClickHouse is the only DBMS found to support multi-factor authentication.
+As per security certifications, postgreSQL does not seem to have any, whereas both SingleStore and ClickHouse have several.
+However, ClickHouse is the only one who has a textit{ISO 27001} certification. The textit{ISO 27001} "certification demonstrates that an organisation has defined and put in place best-practice information security processes."
 \subsection{Criteria 5 - Latency:}
+As seen in the benchmark Appendix~\ref{sec:benchmarks}, ClickHouse scores the best in terms of latency, SingleStore scores second, and PostgreSQL scores the worst by a large margin.
+\\\\
+As such, the three DBMS are ranked as follows, with the best first:
+
+\begin{enumerate}
+    \item ClickHouse
+    \item SingleStore
+    \item PostgreSQL
+\end{enumerate}
