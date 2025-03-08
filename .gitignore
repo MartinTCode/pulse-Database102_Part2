@@ -14,6 +14,7 @@
 *.out
 *.synctex.gz
 *.synctex(busy)
+*.bbl-SAVE-ERROR
 
 # Compiled class file
 *.class

@@ -34,15 +34,7 @@ highest points and the most expensive gets the lowest points when it comes to th
 which one is a scalable horizontal and vertical and we have talked about this and so forth so so you need
 to collect the data um and compare}\\
 
-What to do here?
-\begin{enumerate}
-    \item Choose three vendors
-    \item Choose 5 criteria
-    \item Evaluate each vendor in each criteria (in a table, see question)
-    \item Summarize and recommend a DW DBMS for Census Bureau
-  \end{enumerate}
 \newpage Answers to Question 7:
-testref \cite{benchmark}
 \section{The Web Exercise}
 This question requires a web exercise,therefore we have decided to add sections, one for each product. 
 
@@ -70,12 +62,65 @@ within the data warehouse."\cite[p. 1309]{CourseLitt}
          "the DBMS must be able to handle large, complex queries for key business operations that must complete in reasonable time periods." \cite[p. 1239]{CourseLitt}
     \end{quotation} 
 \end{itemize}
+\begin{comment}
+\begin{itemize}
+    \item Scalability:
+    \item Storage: 
+    \item Cost:
+    \item Security:
+    \begin{itemize}
+        \item Data Encryption:
+        \item Access Control:
+        \item Security Certificates:
+    \end{itemize}
+    \item Latency:
+\end{itemize}   
+\end{comment}
 \subsection{Vendor 1 - ClickHouse:}
-    
+\begin{itemize}
+    \item Scalability: ClickHouse allows for multiple nodes which eases horizontal scalability, 
+    ClickHouse does not automatically shard, and re-sharding your dataset will require significant compute resources. \cite{clickhouseScaling}
+    Given ClickHouse's provided example of a big data warehouse hardware specifications, vertical scaling seems to be well supported \cite{clickhouseScaling}.
+    \item Storage: Clickhouse uses a column-oriented storage model, which is efficient for analytical queries \cite{clickhouseStorage}. ClickHouse is not inherently designed for in-memory usage \cite{clickhouseStorage}.
+    In the benchmark ClickHouse scores the highest in terms of storage size reduction (See Storage Size under Appendix~\ref{sec:benchmarks}).
+    \item Cost: ClickHouse is free to deploy and use, and is open-source \cite{clickhouseCost}.
+    \item Security: 
+    \begin{itemize}
+        \item Data Encryption: Supports data encryption with AES 256 keys and Transparent Data Encryption (TDE) \cite{clickhouseSecurity}.
+        \item Access Control: Supports Role-based access control and multi-factor authentication (MFA) \cite{clickhouseSecurity2}
+        \item Security Certificates: ISO 27001 compliance, SOC 2 Type II compliance, GDPR and CCPA compliance, HIPAA compliance \cite{clickhouseSecurity2}
+    \end{itemize}
+    \item Latency: Clickhouse scores the highest in terms of latency (See Hot Run and Cold Run under Appendix~\ref{sec:benchmarks}).
+\end{itemize}    
 \subsection{Vendor 2 - SingleStore:}
-    
+\begin{itemize}
+    \item Scalability: allows both vertical and horizontal scaling. Horizontal scaling through nodes \cite{singlestoreScaling}
+    \item Storage: Can be modified to have either column- or row-oriented storage \cite{singlestoreStorage}. SingleStore is designed for in-memory usage \cite{singlestoreStorage}.
+    In the benchmark SingleStore scores worse than ClickHouse but far better than PostgreSQL in terms of storage size reduction (See Storage Size under Appendix~\ref{sec:benchmarks}).
+    \item Cost: SingleStore is charged at individual rates (no publically available fixed fee) \cite{singleStoreCost}.
+    \item Security: 
+    \begin{itemize}
+        \item Data Encryption: SingleStore automatically enforces AES 256-bit encryption \cite{singlestoreSecurity}.
+        \item Access Control: SingleStore supports Row-Level Security (RLS) \cite{singlestoreSecurity2}.
+        \item Security Certificates: SOC 2 Type 2, HIPAA, CCPA, GDPR \cite{singlestoreSecurity3}.
+    \end{itemize}
+    \item Latency: SingleStore scores worse than ClickHouse but far better than PostgreSQL in terms of latency (See Hot Run and Cold Run under Appendix~\ref{sec:benchmarks}).
+\end{itemize} 
 \subsection{Vendor 3 - PostgreSQL:}
-
+\begin{itemize}
+    \item Scalability: PostgreSQL can scale horizontally but it is difficult and convoluted to implement \cite{postgresqlHorScaling}.
+    PostgreSQL is however known to be able to scale vertically rather well \cite{postgresqlVerScaling}.
+    \item Storage: PostgreSQL is traditionally a row-oriented database management system (DBMS), but it supports columnar storage through extensions \cite{postgresqlStorage}.
+    In the benchmark PostgreSQL scores the worst by a large margin in terms of storage size reduction (See Storage Size under Appendix~\ref{sec:benchmarks}).
+    \item Cost: PostgreSQL is free to deploy and use, and is open-source \cite{postgresqlCost}.
+    \item Security:
+    \begin{itemize}
+        \item Data Encryption: PostgreSQL supports Transparent Data Encryption (TDE) \cite{postgresqlSecurity} and, with the help of an extension, Column-Level Encryption \cite{postgresqlSecurity2}.
+        \item Access Control: PostgreSQL supports Role-Based Access Control (RBAC) \cite{postgresqlSecurity3} and Row-Level Security (RLS) \cite{postgresqlSecurity4}.
+        \item Security Certificates: None found.
+    \end{itemize}
+    \item Latency: PostgreSQL scores by far the worst in terms of latency (See Hot Run and Cold Run under Appendix~\ref{sec:benchmarks}).
+\end{itemize} 
 \section{The Comparison}
 In this section we provide a comparison between vendors, therefore we have decided to add sections, one for each criterion. 
 
