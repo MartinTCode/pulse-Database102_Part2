@@ -194,9 +194,17 @@ If the DBMS came first in a criteria, it was awarded 3 points, if it came second
     \hline
     \textbf{DBMS} & \textbf{Scalability} & \textbf{Storage} & \textbf{Cost} & \textbf{Security} & \textbf{Latency} & \textbf{Total} \\ \hline
     ClickHouse & 2 & 3 & 3 & 3 & 3 & 14 \\ \hline
-    SingleStore & 3 & 3 & 1 & 2 & 2 & 11 \\ \hline
-    PostgreSQL & 1 & 1 & 3 & 1 & 1 & 7 \\ \hline
+    SingleStore & 3 & 3 & 2 & 2 & 2 & 12 \\ \hline
+    PostgreSQL & 1 & 2 & 3 & 1 & 1 & 8 \\ \hline
     \end{tabular}
     \caption{Scoring per criteria for each DBMS}
     \label{tab:my-table}
 \end{table}
+
+As per this table and the former chapter we can conclude that PostgreSQL is the least recommended DBMS. However, as per the best DBMS, it is not necessarily as clear of a choice as the overview table (Table~\ref{tab:my-table}) might suggest.
+For example, both scalability and security are of utmost importance for a Census Bureau, and ClickHouse is the only DBMS that supports multi-factor authentication and has an \textit{ISO 27001} certification and is thus the better choice when it comes to security. 
+Clickhouse is also free to use, and is open-source, which is a big advantage in terms of cost.
+However, SingleStore is the better choice when it comes to scalability, and storage, and is the second best choice when it comes to security and latency.
+
+As such, the best DBMS for the Census Bureau is ClickHouse since security and latency are of outmost importance for a census bureau, it being free and open-source is also a big advantage. The open-source aspect has several positive aspects not formerly discussed, such as the ability to modify the source code to better fit the needs of the Census Bureau.
+The fact that SingleStore is better at scalability is note-worthy and important to reflect upon, especially given the huge performance demand on a big DBMS such as one employed by a census bureau, but ClickHouse does have rigid scalability support as is and the difference is thus not considered big enough to discredit the advantages that ClickHouse offers.
