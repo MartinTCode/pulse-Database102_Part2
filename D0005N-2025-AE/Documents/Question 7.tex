@@ -157,11 +157,20 @@ As such, the three DBMS are ranked as follows, with the best first:
     \item SingleStore
 \end{enumerate}
 \subsection{Criteria 4 - Security:}
-As per data encryption, all three DBMS:s support AES 256-bit encryption.
+As per data encryption, all three DBMS:s support AES 256-bit encryption.\\
 As per access control, Both SingleStore and PostgreSQL allow for Row-Level Security (RLS), while ClickHouse does not.
-ClickHouse is the only DBMS found to support multi-factor authentication.
+ClickHouse is the only DBMS found to support multi-factor authentication.\\
 As per security certifications, postgreSQL does not seem to have any, whereas both SingleStore and ClickHouse have several.
-However, ClickHouse is the only one who has a textit{ISO 27001} certification. The textit{ISO 27001} "certification demonstrates that an organisation has defined and put in place best-practice information security processes."
+However, ClickHouse is the only one who has a \textit{ISO 27001} certification. The \textit{ISO 27001} \textit{"certification demonstrates that an organisation has defined and put in place best-practice information security processes. "}\cite{ISO27001}.
+\\\\
+As such, the three DBMS are ranked as follows, with the best first:
+
+\begin{enumerate}
+    \item ClickHouse
+    \item SingleStore
+    \item PostgreSQL
+\end{enumerate}
+
 \subsection{Criteria 5 - Latency:}
 As seen in the benchmark Appendix~\ref{sec:benchmarks}, ClickHouse scores the best in terms of latency, SingleStore scores second, and PostgreSQL scores the worst by a large margin.
 \\\\
