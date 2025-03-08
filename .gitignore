@@ -13,6 +13,7 @@
 *.bcf-SAVE-ERROR
 *.out
 *.synctex.gz
+*.synctex(busy)
 
 # Compiled class file
 *.class
