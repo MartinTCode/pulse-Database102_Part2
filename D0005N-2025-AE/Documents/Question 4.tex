@@ -29,11 +29,33 @@ What to do here?
 
 \newpage Answers to Question 4:
 \section{Logical design of a data warehouse for Census Bureaus}
-We have designed a limited dimensional model that could be implemented by a Census Bureau. The model is classified as star schema as it has only fact table which is connected to a number of denormalized dimension tables (Coursebook, 32.4). The theme chosen for this star schema was residence permits in Sweden, which constitutes a part of migration and which among Census Bureaus belongs to the subject area “Population”. Depending on the scope and perspective, residence permits potentially also connects to “Living conditions” and “Housing”. The motivation of us to design a DW about residence permits is mainly to obtain a statistical tool that creates insights about persons who have been granted residence permits in Sweden. As to first gain a better understanding of common features among the target group, and then to help local, regional and national decision makers in Sweden to improve the overall lives of persons with residence permits. 
-\\\\
-The star schema that the group created consists of the fact table ResidencePermits, whose primary key is a composite key consisting of five foreign keys stemming from each dimension table. The fact table contains three fact attributes or facts, which are: permanentResPermits, temporaryResPermits and totalResPermits. As the table name and fact attributes suggest, they refer to the quantitative number of residence permits granted to individuals in a certain country, in this example in Sweden. Here the residence permits have been divided into two additive types, permanent and temporary. Also, total permits has been included, which is registered separately but which should equal the sum of the former two types. 
-\\\\
-The fact table has been accompanied by five dimension tables. Each one of these contains one surrogate type of primary key together with five attributes relating to the dimension in question. The measures of the attributes vary within and across dimension tables, but most of them are qualitative. All five dimensions Time, Domicile, Background, Socioeconomics and Living – including their attributes – have relationships with ResidencePermits as the fact being analysed. It is worth noting that the individual facts in the fact table are independent from all other attributes in the dimension tables, except for the two attributes residencePermitCat and residencePermitDate, which are implicitly interrelated with each of the three facts (permanentResPermits, temporaryResPermits and totalResPermits). 
+We have designed a limited dimensional model that could be implemented by a Census Bureau. 
+The model is classified as star schema as it has only fact table which is connected to a number 
+of denormalized dimension tables (Coursebook, 32.4). The theme chosen for this star schema was 
+residence permits in Sweden, which constitutes a part of migration and which among Census Bureaus 
+belongs to the subject area “Population”. Depending on the scope and perspective, residence permits 
+potentially also connects to “Living conditions” and “Housing”. The motivation of us to design a DW 
+about residence permits is mainly to obtain a statistical tool that creates insights about persons 
+who have been granted residence permits in Sweden. As to first gain a better understanding of common 
+features among the target group, and then to help local, regional and national decision makers in 
+Sweden to improve the overall lives of persons with residence permits. 
+
+The star schema that the group created consists of the fact table ResidencePermits, whose primary 
+key is a composite key consisting of five foreign keys stemming from each dimension table. The fact 
+table contains three fact attributes or facts, which are: permanentResPermits, temporaryResPermits and 
+totalResPermits. As the table name and fact attributes suggest, they refer to the quantitative number 
+of residence permits granted to individuals in a certain country, in this example in Sweden. Here the 
+residence permits have been divided into two additive types, permanent and temporary. Also, total 
+permits has been included, which is registered separately but which should equal the sum of the former two types. 
+
+The fact table has been accompanied by five dimension tables. Each one of these contains one surrogate 
+type of primary key together with five attributes relating to the dimension in question. The measures 
+of the attributes vary within and across dimension tables, but most of them are qualitative. All five 
+dimensions Time, Domicile, Background, Socioeconomics and Living –- including their attributes -– have 
+relationships with ResidencePermits as the fact being analysed. It is worth noting that the individual 
+facts in the fact table are independent from all other attributes in the dimension tables, except for the 
+two attributes residencePermitCat and residencePermitDate, which are implicitly interrelated with each of 
+the three facts (permanentResPermits, temporaryResPermits and totalResPermits). 
 \newpage
 \subsection{Fact table and dimension tables (star schema)}
 \begin{figure}[h] % "h" means "here"
