@@ -18,3 +18,87 @@ What to do here?
 
 \newpage Answers to Question 6:
 
+Segregation has for several years or even decades been a societal problem in many EU-countries. 
+It can be measured in many ways, but common indicators for it include unemployment, no ongoing education, 
+a low level of education and a high(er) demand for health and social services. 
+Segregation is a nuisance for the individuals and a cost for the society. 
+Segregation exists among almost all groups of people, 
+but as a phenomenon it is more common among persons who have moved into their respective countries from abroad. 
+Although the general awareness of segregation as a societal challenge has been high for quite a while, 
+not so many countries have succeeded in diminishing it by increasing integration among segregated groups. 
+Sweden is one of several EU-countries having and working with segregation in society.  
+
+As a group we believe that an EU government, 
+such as that in Sweden, would be able to counteract segregation through a more extensive utilization of data mining technologies. 
+This should be possible – as we assume that the local census bureau in Sweden has implemented a data warehouse (DW), 
+alternatively data mart(s), together with appropriate data mining tools. 
+We present the following scenario. 
+
+Segregation: Persons who have been granted residence permits in Sweden typically have foreign backgrounds. 
+They are therefore a good approximation of the group of people that has one of the highest risks of experiencing segregation. 
+According to the public debate and the academic community, 
+certain societal and individual factors affiliated with e.g. domicile (location of home), 
+non-native background and living conditions are associated with higher levels of segregation.  
+
+Based on our answer in case question Q4 – where we introduced a DW on granted resident permits – 
+we believe that the Census Bureau together with decision makers in Sweden would be interested in 
+receiving answers to the following questions: 
+Which individual and societal factors are key drivers for segregation among persons that have been granted residence permits? 
+Which groups of people having been granted residence permits face the highest risk of becoming segregated? 
+How do the profiles and segregation risks differ between persons with temporary contra permanent residence permits? 
+Can those groups of people with the highest segregation risk be identified beforehand? 
+
+Obtaining answers to or at least more insights into the questions above would help the Census Bureau and authorities Sweden in many ways.
+First, it would be valuable for them to gain a better understanding of exactly what factors entail segregation among people 
+having been granted residence permits. 
+Second, based on the first answer, 
+the CB and authorities would be able to segment residence permit holders as to identify those subgroups having 
+the highest risk-profiles for segregation. 
+Third, they might make new discoveries about how temporary residence permit holders differ from those with permanent permits, 
+and perhaps also about why. And fourth, they could possibly even be able to predict which subgroups and individuals will 
+become segregated unless some corrective actions are taken. 
+All these insights would help the Swedish government and local authorities to impede segregation among residence permit holders – 
+a heterogenous yet collectively a highly exposed group of people.  
+
+Our group thinks that the DW on granted resident permits we presented in Q4 contains almost all of the data needed conducting a data mining
+scenario on Segregation-Residence permit receivers. 
+We recommend that a new attribute (variable) about participation in education is added to one of the dimension tables (Socioeconomics). 
+The attribute/variable should be in ordinal scale as to register different educational levels. 
+Education would thus be one of two dependent variables that act as proxies for segregation. 
+The attribute Income (table Socioeconomics) would constitute the second dependent variable. 
+Income as well would be applied on an ordinal scale with different income levels. 
+The independent variables for segregation, or the explanatory factors, 
+can all be found in the dimension tables of the star schema for the DW. 
+Here we do not outline the independent variables specifically, 
+we just state that they should connect to the dimension table themes Domicile (Location/District of home), 
+Background (Individual characteristics), Socioeconomics (Education \& Occupation) and Living (Household \& Accommodation).
+Different amounts and combinations of independent variables should be used against the dependent variables when 
+investigating segregation with different data mining techniques.  
+
+As a group we believe there are several possible data mining techniques that could fit our problem scenario. 
+The first (1) step of identifying key drivers for segregation could be addressed by applying the data mining task type link analysis and 
+the technique associations discovery (Coursebook, 34.2). 
+This technique is categorized as unsupervised learning,
+as the DW data used would not be labelled in any way (Lecture 6-20250227AE).  
+
+Once associations between key factors and segregation have been found, 
+these factors could be utilized in the second (2) step. 
+Here the data mining task type is database segmentation, 
+i.e. to segment the data in the DW on granted resident permits (Coursebook, 34.2). 
+Although such clustering techniques apply unsupervised learning, 
+the segmentation of DW data could be made at least partly based on the segregation factors identified in step 1. 
+Such a constellation would imply a semi-supervised learning technique (Lecture 6-20250227AE). 
+The purpose of this step would be to obtain a set of externally diverge but 
+internally uniform clusters/segments of people having been granted resident permits. 
+The main interest would be in identifying clusters exhibiting the highest segregation risk. 
+The obtained clusters could also reveal potential differences between the two subsets of data – 
+holders of temporary versus permanent residence permits.  
+
+The third (3) step, which aims to predict which clusters or individuals therein will likely become segregated, 
+is needed because the variable values for the individuals in the data are dynamic. 
+E.g. their employment status, domicile or civil status can and often do change over time. 
+The data mining task in this step is called predictive modelling, and this is a certain type of supervised learning (Coursebook, 34.2). 
+Such techniques can be challenging as they require a training phase and a consequent testing phase, 
+and the training phase and data need to be sufficiently long and extensive. 
+Predictive modelling and its specific technique classification can thus be difficult to conduct on that DW data which 
+covers persons being granted only temporary resident permits. The training phases may not be long enough for that data.    
