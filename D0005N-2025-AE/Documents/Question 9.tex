@@ -66,7 +66,7 @@ See Appendix~\ref{sec:interview} for the full transcript.
 
 \subsection{What is the value of data warehouse to decision making?}
 
-In the interview, see Appendix~\ref{sec:interview}, a representative from a housing development company emphasized the critical role of their data platform 
+In the interview a representative from a housing development company emphasized the critical role of their data platform 
 in decision-making. While they use a data lakehouse rather than a traditional data warehouse, the platform provides valuable 
 insights across multiple areas, including finance, health and safety, sales, and marketing.
 
@@ -80,6 +80,46 @@ demonstrating the importance of robust data infrastructure in modern business de
 
 \subsection{Which decisions you think could be supported via the data warehouse?}
 
-\subsection{What is the role of analytics sandboxes in today’s business intelligence environment?} 
+In the interview it was explained how the company's data lakehouse plays a key role in decision-making. While primarily relying on 
+internal data, they are actively exploring ways to integrate external market trends to enhance their analytical capabilities.
+
+The platform allows project leads to monitor costs in real time, helping them identify overruns and adjust spending accordingly. 
+Marketing teams use data insights to assess campaign performance and optimize ad placements on platforms like Google and YouTube. 
+Sales teams analyze trends to determine where additional marketing efforts are needed and whether pricing strategies should be adjusted. 
+Additionally, by reviewing past project success, the company refines its future investment and development strategies.
+
+Looking ahead, they aim to incorporate broader housing market data and industry trends, which would provide a more comprehensive basis 
+for strategic decision-making.
+
+\subsection{What is the role of analytics sandboxes in today's business intelligence environment?} 
+
+The representative discussed how they do not use a traditional analytics sandbox, but instead operate with flexible environments that 
+serve similar functions. Their system is built on a data lakehouse, and they maintain development, test, and production environments 
+to support rapid development and experimentation. These environments allow teams to test new hypotheses and analysis methods without 
+affecting the production environment.
+
+The company also uses Apache Spark and Parquet files, which enable them to conduct ad hoc analysis in a flexible, low-risk way. The 
+use of Spark Notebooks provides the ability to test and visualize data quickly, making it possible to try out different approaches and 
+gather insights without disrupting ongoing operations. This setup supports rapid development cycles and allows for fearless experimentation 
+in a way that is similar to the benefits provided by an analytics sandbox.
 
 \subsection{How to select an OLAP tool?}
+
+The representative explained that their company does not use an OLAP tool within their data team, but a separate team handles it. When 
+selecting an OLAP tool, performance is a key consideration, particularly the ability to store all data in memory rather than on disk, which 
+provides significant performance benefits. However, this approach can lead to high costs due to the memory usage.
+
+The representative mentioned that if they were selecting an OLAP tool, they would focus on the development operations and ensure the tool 
+supports agile development and works with version control and continuous integration/continuous delivery (CI/CD) processes, which have been 
+a challenge for the current tool.
+
+The company is currently exploring alternatives to their existing OLAP tool, considering tools like Spark and Power BI for certain use cases. 
+The representative noted that for their team, Spark and notebooks already fulfill many of the functionalities required for ad hoc analysis, 
+offering a more flexible and cost-effective solution compared to a traditional OLAP tool.
+
+
+
+
+
+
+
