@@ -79,16 +79,14 @@ which projects sell quickly and which require additional effort, helping optimiz
 Overall, the company's centralized data platform enhances operational efficiency, financial oversight, and strategic planning, 
 demonstrating the importance of robust data infrastructure in modern business decision-making.
 \subsubsection{Reflections on answer to question 1}
-\begin{enumerate}
-    \item DW vs. DLH (DL)
-    \begin{enumerate}
-        \item Intresting to know more about DLH. Not part of the course. How does this differ from DL for example? And what are the main differences between DWH and DLH?
-    \end{enumerate}
-    \item Provides valuable insights across multiple areas.
-    \begin{enumerate}
-        \item Correlates to the course material. DWH is used to provide insights across multiple areas.
-    \end{enumerate}
-\end{enumerate}
+The interview introduced a Data Lakehouse (DLH), a hybrid that combines the benefits of both Data Lakes and Data Warehouses. 
+Unlike traditional Data Warehouses (DWH), which focus on structured data, DLHs allow for a mix of structured and unstructured data, 
+providing greater flexibility and real-time analytics. This is especially useful for continuous decision-making, like in the housing company example. 
+It would be beneficial to explore the differences between DWH and DLH further, as they weren't covered in the course.
+
+The company's platform offers insights across various business areas, similar to how Data Warehouses provide insights across multiple domains in the course material. 
+The platform supports decision-making in finance, health and safety, and marketing, highlighting the importance of having centralized, up-to-date data for strategic decisions. 
+This aligns with the role of DWHs in consolidating data for business intelligence.
 
 \subsection{Question 2: Which decisions you think could be supported via the data warehouse?}
 
@@ -103,21 +101,20 @@ Additionally, by reviewing past project success, the company refines its future 
 Looking ahead, they aim to incorporate broader housing market data and industry trends, which would provide a more comprehensive basis 
 for strategic decision-making.
 \subsubsection{Reflections on answer to question 2}
-\begin{enumerate}
-    \item Internal and external data.
-    \begin{enumerate}
-        \item External data is interesting to see how it can be integrated with internal data to provide more insights in the decision-making process.
-        \item Learn more about external data uses in DWH in general would be interesting for further studies.
-    \end{enumerate}
-    \item Real-time data monitoring.
-    \begin{enumerate}
-        \item Real-time data monitoring is a key feature of DWH. It is interesting to see how it is used in practice.
-    \end{enumerate}
-    \item Future trends.
-    \begin{enumerate}
-        \item Interesting correlation between external data and future trends. How can external data be used to predict future trends?
-    \end{enumerate}
-\end{enumerate}
+
+The integration of external data with internal data provides a richer and more holistic view, enhancing decision-making processes. 
+It would be valuable to explore how such integration is implemented in data warehouses (DWH), as this could offer a deeper understanding 
+of how external market trends shape business strategies. Further investigation into the different sources and types of external data 
+would be an interesting area for future study, especially in the context of DWH and business intelligence.
+
+Real-time monitoring is a crucial feature in DWH systems. Observing how it is applied in practice, such as tracking project costs, 
+could offer a practical example of its impact on decision-making.
+
+The use of external data to predict future trends is a compelling aspect. By incorporating external market trends, the company can potentially 
+anticipate shifts in the housing market and adjust its strategies accordingly. A deeper analysis of how external data sources contribute to forecasting 
+and trend analysis would be useful for understanding its role in strategic decision-making. This could open avenues for more proactive planning, 
+especially in volatile or dynamic markets.
+
 \subsection{Question 3: What is the role of analytics sandboxes in today's business intelligence environment?} 
 
 The representative discussed how they do not use a traditional analytics sandbox, but instead operate with flexible environments that 
@@ -130,11 +127,12 @@ use of Spark Notebooks provides the ability to test and visualize data quickly, 
 gather insights without disrupting ongoing operations. This setup supports rapid development cycles and allows for fearless experimentation 
 in a way that is similar to the benefits provided by an analytics sandbox.
 \subsubsection{Reflections on answer to question 3}
+
+The DLH approach offers more flexibility for experimentation compared to traditional DWH, which often limits rapid iteration. 
+It's interesting how DLH integrates structured and unstructured data for dynamic development cycles. It could be of interest
+to learn more about the similaities and key differences between DLH and sandboxes in DWH in relation to analytics.
+
 \begin{enumerate}
-    \item DLH seems to offer flexibility and similar functionality to an analytics sandbox.
-    \begin{enumerate}
-        \item Interesting to see how DLH can be used in a similar way to an analytics sandbox. How does this differ from a traditional DWH?
-    \end{enumerate}
     \item Apache Spark and Parquet files.
     \begin{enumerate}
         \item Interesting to see how these tools are used in practice. How do they compare to traditional DWH tools?
@@ -156,16 +154,15 @@ The representative noted that for their team, Spark and notebooks already fulfil
 offering a more flexible and cost-effective solution compared to their current traditional OLAP tool.
 
 \subsubsection{Reflections on answer to question 4}
-\begin{enumerate}
-    \item Data analytic tools versus fully fledged OLAP tools.
-    \begin{enumerate}
-        \item Interesting to see how Power Bi is used as an alternative to OLAP tools. When does the need for OLAP tools arise in a organization?
-    \end{enumerate}
-    \item Performance vs. cost considerations.
-    \begin{enumerate}
-        \item Interesting to see how performance and cost considerations are taken into account when selecting an OLAP tool. Cost seems to be a major factor that can get out of hand with in-memory storage solutions.
-    \end{enumerate}
-\end{enumerate}
+
+The use of Power BI instead of traditional OLAP tools is an interesting shift, as it highlights a more flexible and cost-effective approach. 
+However, this raises the question of when OLAP tools become essential. They seem to be needed when the complexity of analysis or the volume 
+of data requires fast, multidimensional querying that tools like Power BI may struggle to handle.
+
+The trade-off between performance and cost is a key insight. In-memory storage can deliver impressive performance but at a high price. 
+While OLAP tools may be ideal for speed, alternatives like Spark and Power BI seem to offer a more balanced approach, 
+especially when cost efficiency becomes a priority. 
+It makes you think about how organizations really have to weigh the value of performance against financial limitations.
 
 
 
