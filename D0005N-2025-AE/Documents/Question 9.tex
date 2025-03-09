@@ -123,25 +123,20 @@ to support rapid development and experimentation. These environments allow teams
 affecting the production environment.
 
 The company also uses Apache Spark and Parquet files, which enable them to conduct ad hoc analysis in a flexible, low-risk way. The 
-use of Spark Notebooks provides the ability to test and visualize data quickly, making it possible to try out different approaches and 
+use of Jupyter Notebooks provides the ability to test and visualize data quickly, making it possible to try out different approaches and 
 gather insights without disrupting ongoing operations. This setup supports rapid development cycles and allows for fearless experimentation 
 in a way that is similar to the benefits provided by an analytics sandbox.
 \subsubsection{Reflections on answer to question 3}
 
-The DLH approach offers more flexibility for experimentation compared to traditional DWH, which often limits rapid iteration. 
+The DLH approach offers more flexibility for experimentation compared to traditional DWH, which often limits rapid iteration \cite{datalakehouse}. 
 It's interesting how DLH integrates structured and unstructured data for dynamic development cycles. It could be of interest
 to learn more about the similaities and key differences between DLH and sandboxes in DWH in relation to analytics.
 
-\begin{enumerate}
-    \item Apache Spark and Parquet files.
-    \begin{enumerate}
-        \item Interesting to see how these tools are used in practice. How do they compare to traditional DWH tools?
-    \end{enumerate}
-    \item Spark Notebooks.
-    \begin{enumerate}
-        \item Spark Notebooks seem to be a useful tool for ad hoc analysis. How do they compare to traditional BI tools?
-    \end{enumerate}
-\end{enumerate}
+The use of Apache Spark and Parquet files for ad hoc analysis is intriguing. It would be beneficial to explore how these tools compare to
+traditional BI tools in terms of flexibility and user experience would be beneficial. This comparison could provide insights into the advantages and limitations of each approach, helping to determine the most suitable tools for various analytical needs.
+The use of Parquet files for storage means they are using a columnar storage format, which is known for its efficiency in handling large datasets \cite{apache_parquet}.
+the use of Apache Spark seems to be a popular, scalable engine for big data processing with machine learning tool support \cite{apache_spark}, it would be interesting to learn more of it's core role in the Data LakeHouse environment in comparrison to the different parts of a Data Warehouse.
+
 \subsection{Question 4: How to select an OLAP tool?}
 
 The representative explained that their company does not use an stricly speaking OLAP tool within their data team, but instead uses a tool called Power Bi which they find sufficient for their analytical needs. 
