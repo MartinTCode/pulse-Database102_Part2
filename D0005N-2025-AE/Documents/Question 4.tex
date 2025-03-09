@@ -34,13 +34,14 @@ We have designed a limited dimensional model that could be implemented by a Cens
 The star schema that the group created consists of the fact table ResidencePermits, whose primary key is a composite key consisting of five foreign keys stemming from each dimension table. The fact table contains three fact attributes or facts, which are: permanentResPermits, temporaryResPermits and totalResPermits. As the table name and fact attributes suggest, they refer to the quantitative number of residence permits granted to individuals in a certain country, in this example in Sweden. Here the residence permits have been divided into two additive types, permanent and temporary. Also, total permits has been included, which is registered separately but which should equal the sum of the former two types. 
 \\\\
 The fact table has been accompanied by five dimension tables. Each one of these contains one surrogate type of primary key together with five attributes relating to the dimension in question. The measures of the attributes vary within and across dimension tables, but most of them are qualitative. All five dimensions Time, Domicile, Background, Socioeconomics and Living – including their attributes – have relationships with ResidencePermits as the fact being analysed. It is worth noting that the individual facts in the fact table are independent from all other attributes in the dimension tables, except for the two attributes residencePermitCat and residencePermitDate, which are implicitly interrelated with each of the three facts (permanentResPermits, temporaryResPermits and totalResPermits). 
-
+\newpage
 \subsection{Fact table and dimension tables (star schema)}
 \begin{figure}[h] % "h" means "here"
   \centering
   \includegraphics[width=1.0\textwidth]{Figures/Q4_StarSchema.jpg}
   \label{fig:my_image}
 \end{figure}
+\newpage
 \subsection{Attribute descriptions for logical design}
 % ResidencePermits (Fact table)
 \begin{table}[htbp]
