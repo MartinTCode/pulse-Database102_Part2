@@ -1,1 +1,46 @@
-write conclusions here
+In this report, we have thoroughly examined various aspects of database management systems (DBMS) 
+and their applicability to a Census Bureau's needs. 
+We viewed the different compontent of a BI-architecture and their applicability for a Census Bureau.
+
+% BI-architecture elements
+We concluded that data marts and sandboxes are an important part of a BI architecture,
+as they provide a structured environment for data analysis and experimentation while still being restrictive and carefull in their implementation.
+Data mining was concluded to be a crucial part of a BI architecture,
+as it enables the discovery of patterns and trends in large datasets.
+
+%analysis of each DBMS
+Through a detailed comparison of ClickHouse, SingleStore, and PostgreSQL, 
+we have evaluated their performance based on criteria such as scalability, 
+storage, cost, security, and latency.
+Our analysis revealed that each DBMS has its strengths and weaknesses. 
+ClickHouse emerged as the best overall choice due to its superior performance in 
+security and latency, which are critical for a Census Bureau. 
+Its open-source nature and cost-effectiveness further enhance its appeal. 
+SingleStore, while excelling in scalability and storage, 
+falls short in terms of cost and security compared to ClickHouse. 
+PostgreSQL, despite being a robust and reliable DBMS, lags behind in several key areas, 
+making it the least recommended option for this specific use case.
+
+
+
+% AI integration
+We also explored the challenges and solutions for integrating AI into 
+a conventional BI architecture. 
+By proposing the addition of a data lake and the use of ELT processes, 
+we addressed the need for handling large volumes of unstructured data. 
+The integration of vector databases and enhanced security measures further ensures that 
+the architecture is optimized for AI-enhanced analytics.
+
+% interview
+From the interview discovered the concept of Data Lake House (DLH) and tools used in its implementation,
+in the future it would be interesting to explore in greater detail the possibility of implementing a DLH in a Census Bureau.
+
+In conclusion, the best DBMS for a Census Bureau, 
+considering the importance of security, latency, and cost, is ClickHouse. 
+However, it is essential to adopt a balanced approach, 
+leveraging the strengths of each DBMS where applicable, 
+to build a robust and efficient data management system. 
+The proposed architectural changes will enable the Census Bureau to harness the power of AI, 
+ensuring that it remains at the forefront of data-driven decision-making.
+Dwelving deeper into the subjects uncovered in the interview before doing so could 
+however greatly change the design of the warehouse. 
