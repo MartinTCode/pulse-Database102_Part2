@@ -3,7 +3,7 @@
 \section{Logical design of a data warehouse for Census Bureaus}
 We have designed a limited dimensional model that could be implemented by a Census Bureau. 
 The model is classified as star schema as it has only fact table which is connected to a number 
-of denormalized dimension tables (Coursebook, 32.4). The theme chosen for this star schema was 
+of denormalized dimension tables \cite[chapter~32.4]{CourseLitt}. The theme chosen for this star schema was 
 residence permits in Sweden, which constitutes a part of migration and which among Census Bureaus 
 belongs to the subject area “Population”. Depending on the scope and perspective, residence permits 
 potentially also connects to “Living conditions” and “Housing”. The motivation of us to design a DW 
@@ -23,7 +23,7 @@ permits has been included, which is registered separately but which should equal
 The fact table has been accompanied by five dimension tables. Each one of these contains one surrogate 
 type of primary key together with five attributes relating to the dimension in question. The measures 
 of the attributes vary within and across dimension tables, but most of them are qualitative. All five 
-dimensions Time, Domicile, Background, Socioeconomics and Living –- including their attributes -– have 
+dimensions Time, Domicile, Background, Socioeconomics and Living - including their attributes - have 
 relationships with ResidencePermits as the fact being analysed. It is worth noting that the individual 
 facts in the fact table are independent from all other attributes in the dimension tables, except for the 
 two attributes residencePermitCat and residencePermitDate, which are implicitly interrelated with each of 
