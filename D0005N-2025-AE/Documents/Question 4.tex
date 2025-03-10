@@ -1,5 +1,3 @@
-
-\textbf{NEEDS TO BE DONE: CHECK TEXT TO MODIFIED TABLES; CHANGE DOMAIN TO ALIGN W MODIFIED DATA TYPE; CHANGE NAMES IN SOCIOECONOMICS IN STAR SCHEMA}
 \section{Logical design of a data warehouse for Census Bureaus}
 We have designed a limited dimensional model that could be implemented by a Census Bureau. 
 The model is classified as star schema as it has only fact table which is connected to a number 
@@ -78,13 +76,13 @@ the three facts (permanentResPermits, temporaryResPermits and totalResPermits).
     \hline
     year & Year & INT \\
     \hline
-    quarter & Quarter of a year & SMALLINT(1-4) \\
+    quarter & number of a quarter of a year & SMALLINT(1-4) \\
     \hline
-    month & Month & SMALLINT(1-12) \\
+    month & Month number & SMALLINT(1-12) \\
     \hline
-    week & Week & SMALLINT(1-53) \\
+    week & Week number & SMALLINT(1-53) \\
     \hline
-    day & Day & SMALLINT(1-31) \\
+    day & Day number & SMALLINT(1-31) \\
     \hline
   \end{tabular}
 \end{table}
@@ -99,15 +97,15 @@ the three facts (permanentResPermits, temporaryResPermits and totalResPermits).
     \hline
     domicileID & Primary Key, auto increment & INT \\
     \hline
-    region & Region & VARCHAR \\
+    region & Region name & VARCHAR \\
     \hline
-    metropolitanArea & Metropolitan area & VARCHAR \\
+    metropolitanArea & Metropolitan area name & VARCHAR \\
     \hline
-    municipality & Municipality & VARCHAR \\
+    municipality & Municipality name & VARCHAR \\
     \hline
     districtCode & District code & VARCHAR \\
     \hline
-    street & Street & VARCHAR \\
+    street & Street name & VARCHAR \\
     \hline
   \end{tabular}
 \end{table}
@@ -124,11 +122,11 @@ the three facts (permanentResPermits, temporaryResPermits and totalResPermits).
     \hline
     yob & Year of birth & SMALLINT(4) \\
     \hline
-    gender & Gender & CHAR(1) \\
+    gender & Gender, M/F & CHAR(1) \\
     \hline
     nationality & Nationality & VARCHAR \\
     \hline
-    residencePermitCat & Residence permit category (Work/EU-EES etc) & ENUM \\
+    residencePermitCat & Residence permit category (Work/EU-EES etc) & VARCHAR \\
     \hline
     residencePermitDate & Date of residence permit & DATE \\
     \hline
@@ -147,9 +145,9 @@ the three facts (permanentResPermits, temporaryResPermits and totalResPermits).
     \hline
     civilStatus & Civil status & VARCHAR \\
     \hline
-    educationLevelDescription & Education level & VARCHAR \\
+    educationLevelDescription & Education level  & VARCHAR \\
     \hline
-    educationFieldDescription & Field of education & VARCHAR \\
+    educationFieldDescription & Field of education  & VARCHAR \\
     \hline
     occupationDescription & Occupation category & VARCHAR \\
     \hline
