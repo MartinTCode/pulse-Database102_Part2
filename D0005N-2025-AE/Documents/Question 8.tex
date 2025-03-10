@@ -26,4 +26,29 @@ What to do here?
   \end{enumerate}
 
 \newpage Answers to Question 8:
+The big challenges we see in implementing AI in a conventional BI architecture as shown in this course is that AI needs massive amount of data, 
+and it ought to be unstructured data (https://www.ibm.com/think/topics/structured-vs-unstructured-data).
+The conventional BI architecture as shown in this report is designed to handle unstructured data at such a scale.
+(SOURCE: https://ieeexplore.ieee.org/abstract/document/10107808)
+A way we would solve this would by not using an integrated ETL process, but rather an ELT process, where we extract data from external and internal sources,
+load the data into a data lake, and then transform it from the data lake into our current architecture (see Q1).
+(SOURCE ELT: https://www.integrate.io/blog/etl-vs-elt/)
+This would allow us to store all the data in its raw form, and then use it to train models for AI upon the data-lake.
+As such, we would need to add a data lake to the architecture, and connect the sandbox to the data lake to test models and 
+algorithms before they are put into production.
+
+We would also recommend employing an OLAP tool with good support for AI integration, and use vector databases to store data as to optimize it for AI usability.
+As vector databases can be of a columnar storage structure type, the data in the BI-architecture would still be optimized for storing and querying large amounts of data,
+with the expanded benefit of being optimized to store data for AI and AI-enhanced analytics needs.
+(SOURCE VECTOR DATABASE http://oracle.com/es/database/vector-database/)
+
+A data lake is as the name suggest a big pool of unstructured data, and as such, data privacy and security should be a top priority when implementing this (SOURCE), 
+and we would suggest implementing data masking and encryption techniques to protect sensitive data from unauthorized access.
+(SOURCE DATA LAKE SECURITY: https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/securing-protecting-managing-data.html)
+
+So in summary, our changes to the architectureq would be to add a data lake, extract and load into that data lake, 
+and then transform data from there into our current architecture.
+We would also connect the sandbox to the data lake, employ an OLAP tool with good support for AI integration and 
+use vector databases of the columnar data type to store data and 
+increase security measures to mitigate some security risk from storing large and raw data in a datalake.
 
